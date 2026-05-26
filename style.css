@@ -1,0 +1,287 @@
+@charset "utf-8";
+@media screen and (max-width: 768px){
+  
+}
+
+/* Base style */
+body{
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+.button{
+   cursor: pointer;
+}
+.button {
+ border: 0;
+}
+
+/*
+ header
+ */
+.header{
+  background-color: #999;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 5px;
+ position: fixed;/*ä»–ã®è¦ç´ ã¨é–¢ä¿‚ãªãå¸¸ã«å›ºå®šã•ã›ã‚‹*/
+ z-index: 10;
+ top: 0;
+ left: 0;
+}
+.header-logo{
+  margin: 0;
+}
+.header-logo > a {
+  display: block;
+}
+/* .header-nav{} */
+.header-navlist{
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .header-navitem{} */
+.header-navitem > a {
+  display: block;
+  padding: 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold; 
+  border-bottom: 2px solid transparent;
+  transition: border-color .25s;
+}
+.header-navitem > a:hover{
+  border-bottom: 2px solid #333;
+}
+
+/* 
+section
+*/
+.section{
+    padding: 30px 15px;/*コンテンツとボーダーの距離*/
+}
+
+.section-headline{
+  text-align: center;/*中央寄せ*/
+  font-size: 40px;/*文字の大きさ*/
+  font-weight: bold;
+  margin: 0 0 40px;/*マージン*/
+}
+.section.section-secondary{
+  background: #efefef;/*背景色をグレー*/
+}
+.section-button{
+  margin-top: 40px 0 0;
+  text-align: center;
+}
+/*
+ hero
+ */
+.hero{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+ }
+ .hero > strong {
+  position: absolute;
+  z-index: 2 ;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%) ;
+  font-size: 120px;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  text-align: center;
+ }
+
+.hero > video{
+  position: absolute;
+  width: 100%;
+  height: 105%;
+  z-index: 1;
+}
+
+/* 
+about部分
+*/
+.about{
+  margin: 0;/*要素の外側の余白を0にする*/
+  display: flex;/*aboutの子要素に対して要素を横並びにする。*/
+}
+
+.about-caption{
+   padding-left: 15px;/*コンテンツとボーダーの余白を15pxあける*/
+}
+
+.about-headline{
+  margin: 0 0 20px/*margin-topにつく*/ 0/*magin-leftとrightにつく*/ 20px/*margin-bottomにつく*/;
+  font-size: 30px;
+}
+
+/* 
+gridの部分
+*/
+.grid{
+  margin: 0;/* グリットアイテムとの間隔をなし(0)に指定する */
+  padding: 0;/* 枠線の内側から、要素までの余白をなし(0) */
+  display: flex;/* 要素を並列にするために、リスト要素をフレックスコンテナ(親要素)にして、その子要素をフレックスアイテムにする。 */
+  align-items: center;/* フレックスアイテムを指定したので、上下を中央寄せにする */
+  justify-content: center;/* フレックスで横並びにした要素全てを中央寄せ (水平方向)*/
+}
+.grid-item{
+  list-style: none;/* li要素の黒点を消す指定 */
+}
+.grid-col-2 > .grid-item{
+  width: 50%;/* 幅を50% */
+}
+.grid-col-3 > .grid-item{
+  width: 33.3%;/* 幅を33.3% */
+}
+.grid-col-4 > .grid-item{
+  width: 25%;/* 幅を25% */
+}
+/* 
+feature部分
+*/
+.feature{
+  text-align: center;/* テキストを中央寄せにする */
+  padding: 0;/* 枠線の内側から、要素までの余白をなし(0) */
+}
+.feature-headline{
+  margin: 0 0 20px;/* 要素の外側の余白を上0・左右0・下20pxのスペースを指定 */
+}
+.feature-img{
+  margin: 0 0 20px;/* 要素の外側の余白を上0・左右0・下20pxのスペースを指定 */
+}
+.feature-description{
+  margin: 0;/* 要素の外側の余白をなし */
+  text-align: left;/* テキストを左寄せ */
+}
+
+
+
+/*
+ card部分
+ */
+ .card{
+  padding: 0 10px;
+}
+.card-link{
+  display: block; /*ブロックレベル要素に変更*/
+  color:black;     
+  text-decoration: none;
+  transition: background-color .25s;
+}
+
+.card-link:hover{
+  background-color: #eee;
+}
+.card-label{
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: #999;
+  color: #fff;
+  display: block;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.card-image{
+  width: 100%;
+  height: auto;
+}
+.card-info{
+  padding: 5px 10px;
+}
+/* .card-time{} */
+.card-headline{
+  margin: 0;
+}
+.card-description{
+  margin: 0;
+}
+
+
+
+/*
+ button部分
+ */
+ .button{
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  background-color: #333;
+  text-align: center;
+  padding: 15px 60px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 #bbb; 
+  transition: box-shadow .25s;
+}
+
+.button:hover{
+  box-shadow: 0 0 0 #bbb;
+}
+.button.button-submission {
+  background:#92d3ca;
+}
+
+
+/*
+ footer
+ */
+ .footer{
+   background-color: #333;/* èƒŒæ™¯è‰²ã‚’#333 */
+   color: #fff;/* ãƒ†ã‚­ã‚¹ãƒˆã®è‰²ã‚’ç™½ã«æŒ‡å®š */
+}
+.footer-map{
+   margin: 0;/* ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ãƒžãƒ¼ã‚¸ãƒ³ãŒå…¥ã£ã¦ã„ã‚‹ã®ã§ãƒžãƒ¼ã‚¸ãƒ³ã‚’ãªã—ã«ã™ã‚‹ */
+   padding: 40px 15px;
+   display: flex;/* åœ°å›³æƒ…å ±ã¨ãƒ†ã‚­ã‚¹ãƒˆæƒ…å ±ã‚’æ¨ªä¸¦ã³ã«ã™ã‚‹ */
+   align-items: center;
+   justify-content: center;
+}
+.footer-map > iframe{
+    width: 60%;/* å¹…ã‚’å…¨ä½“ã®6å‰² */
+}
+.footer-mapinfo{
+  width: 40%;
+  padding: 15px;
+}
+.footer-maplogo{
+  font-size: 25px;
+  font-weight: bold;
+}
+.footer-maplogo > img{
+  fill: transparent;
+  margin-right: 10px;
+}
+.footer-mapaddress{
+  font-style: normal;
+}
+.footer-mapaddress a{
+    color: #fff;  /* æ–‡å­—è‰²ã‚’ç™½ã«ã™ã‚‹ */ 
+  }
+.footer-line{
+    border-color:#444 ; /* ãƒœãƒ¼ãƒ€ãƒ¼ã®è‰²ã‚’é»’è‰² */
+}
+.footer-copy{
+  display: block;/*ãƒ–ãƒ­ãƒƒã‚¯ãƒ¬ãƒ™ãƒ«è¦ç´ ã«å¤‰æ›´ã™ã‚‹*/
+  text-align: center;/*ä¸­å¤®å¯„ã›ã«ã™ã‚‹*/
+  padding: 10px;/* ãƒ‘ãƒ‡ã‚£ãƒ³ã‚°ã‚’10px */
+}
